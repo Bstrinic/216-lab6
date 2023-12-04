@@ -29,11 +29,14 @@ let duration = "0";
 // INSERT YOUR CODE HERE
 
 function recalculate() {
-    let costLabel = document.getElementById("")
+    let costLabel = document.getElementById("calculated-cost");
+
+    if (modelName === "XYZ") {
+        costLabel.innerHTML = (duration * 100).toFixed(2);
+    } else if (modelName === "CPRG") {
+        costLabel.innerHTML = (duration * 213).toFixed(2);
+    }
 }
-
-
-
 
 /****************** model button logic ******************/
 
@@ -49,6 +52,19 @@ function recalculate() {
 
 // INSERT YOUR CODE HERE
 
+let modelButton = document.getElementById("model-button");
+
+function changeModel() {
+    if (modelName === "XYZ") {
+        modelName = "CPRG";
+        modelText.innerHTML = "Model CPRG";
+    } else if (modelName === "CPRG") {
+        modelName = "XYZ";
+        modelText.innerHTML = "Model XYZ";
+    }
+
+    recalculate();
+}
 
 
 
