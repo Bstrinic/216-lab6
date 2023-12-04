@@ -52,6 +52,7 @@ function recalculate() {
 
 // INSERT YOUR CODE HERE
 
+let modelText = document.getElementById("model-text")
 let modelButton = document.getElementById("model-button");
 
 function changeModel() {
@@ -93,11 +94,11 @@ function changeDuration() {
         durationText.innerHTML = duration;
         recalculate();
     } else {
-        alert("Invalid input. Please enter a valid number.")
+        alert("Invalid input. Please enter a valid number.");
     }
 }
 
-durationButton.addEventListener("click", changeDuration)
+durationButton.addEventListener("click", changeDuration);
 
 
 
