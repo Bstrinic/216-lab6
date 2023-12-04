@@ -66,7 +66,7 @@ function changeModel() {
     recalculate();
 }
 
-
+modelButton.addEventListener("click", changeModel);
 
 
 
